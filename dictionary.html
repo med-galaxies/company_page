@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>PC Partner</title>
+<meta name="keywords" content="PC Partner" />
+<meta name="description" content="PC Partner" />
+<meta http-equiv="content-language" content="zh-TW">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-xinqi.css"/>
+<link rel="stylesheet" href="css/animate.css"/>
+<style>
+p{text-indent: 30px;}
+        
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 15px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .contact {
+            margin-top: 40px;
+            font-style: bold;
+            font-weight: bold;
+
+        }
+        .name{
+            font-family: "STHeiti";
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #485b4d;
+            padding: 15px;
+        }
+        .p_title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .eng_title{
+            font-size: 12px;
+            font-weight: bold;
+            color: #20894d;
+
+        }
+    </style>
+</head><body>
+<!--导航-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand"><!--<img alt="PC Partner Logo" width="200" height="70" src="images/xqb-logo.png" style="margin-right:20px;">-->
+            
+
+            </a>
+        </div>
+
+        
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            <li><div><p class="name">青果环保</p></div></li>
+                <li><a href="./index.html" style="color:#253d24;font-weight:bold;">主页</a></li>
+                <li><a href="#html5" style="color:#253d24;font-weight:bold;">关于我们</a></li>
+                <li><a href="./dictionary.html" style="color:#253d24;font-weight:bold;">公示公告</a></li>
+                <li><a href="#course" style="color:#253d24;font-weight:bold;">业务范围</a></li>
+                <li><a href="#course" style="color:#253d24;font-weight:bold;">行业动态</a></li>
+                <li><a href="#contact" style="color:#253d24;font-weight:bold;">企业文化</a></li>
+            </ul>
+        </div>
+        <p class="eng_title">Changzhou QinGuo ENVIRONMENTAL
+             PROTECTION INDUSTRY Development Co. LTD</p>
+    </div>
+</nav>
+<p></p>
+<!--导航-->
+
+<!--home-->
+
+<div class="container">
+            
+            <ul><a href="./notification02.html">青龙西路北侧、东青路西侧(QQ010405-02)地块土壤污染状况调查项目公示材料</a></ul>
+            <ul><a href="./notification05.html">劳动东路北侧、前浪浜西侧(DN040205)地块土壤污染状况调查项目公示材料</a></ul>
+        </div>
+
+
+
+
+
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                &copy;&nbsp;Copyright PC Partner Group Limited. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/jquery.singlePageNav.min.js"></script>-->
+<script src="js/wow.min.js"></script>
+<script>
+$(function(){
+    /*导航跳转效果插件*/
+    /*$('.nav').singlePageNav({
+        offset:70
+    });*/
+    /*小屏幕导航点击关闭菜单*/
+    /*$('.navbar-collapse a').click(function(){
+        $('.navbar-collapse').collapse('hide');
+    });*/
+    new WOW().init();
+    
+    //鼠标滑过图片切换
+    /* var oldImageUrl = '';
+    $('.case-img').hover(function(){
+        oldImageUrl = $(this).attr('src');
+        $(this).attr('src', $(this).attr('data-src')).fadeIn();
+    },
+    function(){
+        $(this).attr('src', oldImageUrl).fadeIn();
+    }); */
+});
+</script>
+
+<script type="text/javascript" src="http://hq.sinajs.cn/list=hk01263" charset="gb2312"></script>
+<script type="text/javascript">
+function formatNum(num,n)
+{
+	//参数说明：num 要格式化的数字 n 保留小数位
+	num = String(num.toFixed(n));
+	var re = /(-?\d+)(\d{3})/;
+	while(re.test(num)) num = num.replace(re,"$1,$2")
+	return num;
+}
+
+var elements = hq_str_hk01263.split(",");
+var today_open=elements[2];
+var today_new=elements[6];
+
+if (elements[2]=="0.000")
+{
+	today_open="--";
+}
+
+var change=formatNum(today_new-elements[3],3);
+var change_p=formatNum(change/elements[3]*100,3);
+
+$("#shijia").html(" 市價:" + today_new);
+/* document.write("股票英文："+elements[0]+"<br/>");
+document.write("股票名称："+elements[1]+"<br/>");
+document.write("今开盘："+today_open+"<br/>");
+document.write("昨收盘："+elements[3]+"<br/>");
+document.write("最新价："+today_new+"<br/>");
+document.write("升跌："+change+"<br/>");
+document.write("升跌%："+change_p+" %<br/>");
+document.write("成交价："+elements[10]+" HK$<br/>");
+document.write("成交量："+elements[12]+" 股<br/>");
+document.write("更新日期："+elements[17]+"<br/>");
+document.write("更新时间："+elements[18]+"<br/>"); */
+</script>
+</body></html>
